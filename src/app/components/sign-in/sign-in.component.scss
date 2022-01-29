@@ -1,0 +1,97 @@
+.signin-outer-container{
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding: 40px 0px;
+    background-color: #fff;
+}
+.signin-inner-container{
+    height: 80%;
+    width: 30%;
+    padding:50px;
+    justify-content: center;
+    //align-items: center;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    margin:  auto;
+}
+.s-fundoo-h1{
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+       .sf1{
+        color:rgb(66, 133, 244);
+        font-size: 35px;
+       }
+       .sf2{
+            color: red;
+        }
+        .sf3{
+            color: yellow;
+        }
+        .sf4{
+            color: rgb(66, 133, 244);
+        }
+        .sf5{
+            color: rgb(3, 167, 3);
+        }
+        .sf6{
+            color: red;
+        }
+}
+.signin-h1{
+    font-size: 35px;
+    padding: 20px 0;
+}
+.signin-h2{
+    font-size: 25px;
+    padding: 20px 0;
+    font-weight: 200;
+}
+.sEmail{
+    padding: 25px 0;
+    .sa-forgot{
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(66, 133, 244);
+    }
+}
+.sLearn-more{
+    padding: 25px 0;
+    .s-p2{
+        font-size: 20px;
+        }
+    .slearn{
+        margin-top: 30px;
+    }
+    .sa-learn{
+        font-size: 20px;
+        font-weight: 200; 
+        color: rgb(66, 133, 244);
+    }
+}
+.s-botton{
+    padding: 30px 0px;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 100px;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    cursor: inherit;
+}
+.sCreate-account{
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    color: rgb(66, 133, 244);
+    border: 0px;
+    border-radius: 4px;
+}
+.s-next{
+    background-color: rgb(66, 133, 244);
+    color:#fff;
+    width: 100px;
+    height: 45px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+}

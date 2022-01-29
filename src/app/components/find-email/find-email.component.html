@@ -1,0 +1,28 @@
+<div class="findemail-outer-container">
+    <div class="findemail-inner-container">
+        <div class="efundoo" fxLayoutAlign="center center">
+            <h1 class="e-fundoo-h1">
+                <span class="ef1">F</span>
+                <span class="ef2">U</span>
+                <span class="ef3">N</span>
+                <span class="ef4">D</span>
+                <span class="ef5">O</span>
+                <span class="ef6">O</span>
+            </h1>
+        </div>
+        <div class="findemail-h1" fxLayoutAlign="center center">Find your email</div>
+        <div class="findemail-h2" fxLayoutAlign="center center">Enter your phone number or recovery email</div>
+        <form [formGroup]="findemailForm" (ngSubmit)="onSubmit()">
+            <div class="eEmail">
+                <mat-form-field appearance="outline" style="width:100%; height: 10%;">
+                    <mat-label style="font-size: 18px;">E-mail or Phone no.</mat-label>
+                    <input matInput type="text" formControlName="email" placeholder="E-mail or Phone no">
+                    <mat-error>Enter the email</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="e-botton" fxLayout="row" fxLayoutAlign="end center">
+                <button class="e-next" routerLink="/reset-password">Next</button>
+            </div>
+        </form>
+    </div>
+</div>

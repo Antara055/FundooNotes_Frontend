@@ -1,0 +1,35 @@
+<div class="signin-outer-container">
+    <div class="signin-inner-container">
+            <h1 class="s-fundoo-h1" fxLayoutAlign="center center">
+                <span class="sf1">F</span>
+                <span class="sf2">U</span>
+                <span class="sf3">N</span>
+                <span class="sf4">D</span>
+                <span class="sf5">O</span>
+                <span class="sf6">O</span>
+            </h1>
+        <div class="signin-h1" fxLayoutAlign="center center">Sign in</div>
+        <div class="signin-h2" fxLayoutAlign="center center">Use your FunDoo Account</div>
+      <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+        <div class="sEmail">
+            <mat-form-field appearance="outline" style="width:100%; height: 10%;" >
+                <mat-label style="font-size: 18px;">E-mail or Phone no.</mat-label>
+                <input matInput type="text" formControlName="email" placeholder="E-mail or Phone no">
+              <mat-error>Enter the email</mat-error>
+            </mat-form-field>
+            <a href="#" class="sa-forgot" routerLink="/find-email">Forgot Email?</a>
+        </div>
+      
+        <div class="sLearn-more">
+            <div class="s-p2">Not your computer? Use Guest mode to sign in privately.</div>
+            <div class="slearn">
+                <a href="#" class="sa-learn" >Learn more</a>
+            </div>
+        </div>
+        <div class="s-botton"  fxLayout="row" fxLayoutAlign="space-between center">
+            <button class="sCreate-account">Create Account</button>
+            <button class="s-next">Next</button>
+          </div>
+        </form>
+    </div>
+</div>

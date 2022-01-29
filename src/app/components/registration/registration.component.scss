@@ -1,0 +1,94 @@
+.Registration-outer-container{
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding: 40px 0px;
+    background-color: #fff;
+}
+.Registration-inner-container{
+    height: 100%;
+    width: 55%;
+    padding:50px;
+    justify-content: center;
+    //align-items: center;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    margin:  auto;
+}
+.Fundoo-header{
+    font-size: 30px;
+    
+}
+.left-container{
+    width: 60%;
+    padding-left: 20px;
+    //padding:40px;
+} 
+.right-container{
+    width: 40%;
+}
+.fundoo-h1{
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 30px;
+    }
+    .f1{
+    color:rgb(66, 133, 244);
+    }
+    .f2{
+        color: red;
+    }
+    .f3{
+        color: yellow;
+    }
+    .f4{
+        color: rgb(66, 133, 244);
+    }
+    .f5{
+        color: rgb(3, 167, 3);
+    }
+    .f6{
+        color: red;
+    }
+    .R-first-last-name{
+        width: 100%;
+    }
+    
+    .username-header{
+        color: rgb(66, 133, 244);
+    }
+    .show-password{
+        color: #202124;
+        font-size: 20px
+    }
+    .R-bottom{
+        padding: 30px 0px;
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+        font-size: 100px;
+        letter-spacing: .0107142857em;
+        font-weight: 500;
+        cursor: inherit;
+    }
+    .sign-in-instead{
+        width: 150px;
+        height: 45px;
+        padding: 5px;
+        color: rgb(66, 133, 244);
+        border: 0px;
+        border-radius: 4px;
+    }
+    .R-next{
+        background-color: rgb(66, 133, 244);
+        color:#fff;
+        width: 100px;
+        height: 45px;
+        padding: 5px;
+        border: 0px;
+        border-radius: 4px;
+    
+    }
+    .right-p{
+        font-size: 10px;
+    }
+    .logo{
+        height: inherit;
+    }

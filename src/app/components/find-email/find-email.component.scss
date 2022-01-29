@@ -1,0 +1,76 @@
+.findemail-outer-container{
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding: 75px 0px;
+    background-color: #fff;
+}
+.findemail-inner-container{
+    height: 70%;
+    width: 28%;
+    padding:50px;
+    justify-content: center;
+    //align-items: center;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    margin:  auto;
+}
+.e-fundoo-h1{
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    .ef1{
+        color:rgb(66, 133, 244);
+        font-size: 35px;
+       }
+        .ef2{
+            color: red;
+        }
+        .ef3{
+            color: yellow;
+        }
+        .ef4{
+            color: rgb(66, 133, 244);
+        }
+        .ef5{
+            color: rgb(3, 167, 3);
+        }
+        .ef6{
+            color: red;
+        }
+}
+.findemail-h1{
+    font-size: 28px;
+    padding: 20px 0;
+}
+.findemail-h2{
+    font-size: 17px;
+    padding: 20px 0;
+}
+.eEmail{
+    padding: 25px 0;
+    //height: 500px;
+    .sa-forgot{
+    font-size: 20px;
+    //font-weight: 1000px;
+    color: rgb(66, 133, 244);
+    }
+}
+
+.e-botton{
+    padding: 30px 0px;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 100px;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+}
+.e-next{
+    background-color: rgb(66, 133, 244);
+    color:#fff;
+    width: 100px;
+    height: 45px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+}
+
