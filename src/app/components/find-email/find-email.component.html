@@ -12,6 +12,7 @@
         </div>
         <div class="findemail-h1" fxLayoutAlign="center center">Find your email</div>
         <div class="findemail-h2" fxLayoutAlign="center center">Enter your phone number or recovery email</div>
+        <div class="form">
         <form [formGroup]="findemailForm" (ngSubmit)="onSubmit()">
             <div class="eEmail">
                 <mat-form-field appearance="outline" style="width:100%; height: 10%;">
@@ -21,8 +22,9 @@
                 </mat-form-field>
             </div>
             <div class="e-botton" fxLayout="row" fxLayoutAlign="end center">
-                <button class="e-next" routerLink="/reset-password">Next</button>
+                <button class="e-next" >Next</button>
             </div>
         </form>
+    </div>
     </div>
 </div>

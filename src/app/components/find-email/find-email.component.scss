@@ -74,3 +74,21 @@
     border-radius: 4px;
 }
 
+@media screen and (max-width: 480px) {
+  
+    .findemail-inner-container{
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 8px;
+        border: none;
+        margin:  auto;
+    }
+    .form{
+        width: 80%;
+        height: 70%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

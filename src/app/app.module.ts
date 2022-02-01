@@ -12,6 +12,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FindEmailComponent } from './components/find-email/find-email.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MatInputModule,
     FlexLayoutModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

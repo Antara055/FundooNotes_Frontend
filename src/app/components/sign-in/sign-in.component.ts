@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/user/user.service';
 
 
 @Component({
@@ -11,21 +12,28 @@ export class SignInComponent implements OnInit {
   signinForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private user: UserService) { }
 
   ngOnInit() {
     this.signinForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
+      password:['', [Validators.required, Validators.minLength(6)]]
     });
   }
   get f() { return this.signinForm.controls; }
 
   onSubmit() {
     this.submitted = true;
-    if (this.signinForm.invalid) {
-      return;
+    if (this.signinForm.valid) {
+      let reqData={
+        email:this.signinForm.value.email,
+        password:this.signinForm.value.password
     }
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.signinForm.value, null, 4));
+    this.user.login(reqData).subscribe((response:any)=>{
+        console.log(response);
+    })
+    }
+    //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.signinForm.value, null, 4));
   }
 }
 
