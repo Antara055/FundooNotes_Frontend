@@ -12,7 +12,6 @@ export class UserService {
     let header = {
       headers:new HttpHeaders({
         'Content-type':'application/json'
-        //'Authorization':'token'
       })
     }
     return this.httpService.postService('/users/register',reqdata,false,header)
@@ -43,4 +42,5 @@ export class UserService {
     }
     return this.httpService.putService('/users/resetpassword',reqdata,true,header)
   }
+  
 }

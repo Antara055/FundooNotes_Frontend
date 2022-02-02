@@ -14,6 +14,17 @@ import { FindEmailComponent } from './components/find-email/find-email.component
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+
+import { IconsComponent } from './components/icons/icons.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { DisplayNoteComponent } from './components/display-note/display-note.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +32,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     RegistrationComponent,
     SignInComponent,
     FindEmailComponent,
-    ResetPasswordComponent
-    
+    ResetPasswordComponent,
+    DashboardComponent,
+    IconsComponent,
+    CreateNoteComponent,
+    DisplayNoteComponent,
+    GetAllNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +49,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

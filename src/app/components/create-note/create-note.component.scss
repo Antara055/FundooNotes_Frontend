@@ -1,0 +1,67 @@
+.input {
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+    border: 0px solid;
+    min-height: 10px;
+    outline: none;
+  }
+  .cn-matcard{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 7px rgb(126, 124, 124);
+    height:15px;
+    width: 600px;
+    display: flex;
+    align-items: center; 
+    margin-left: 34%;
+    margin: 32px auto 50px auto;
+  }
+  .cn-close{
+    margin: 200px;
+    border: none;
+    background-color: #fff;
+  }
+  .cn-button {
+    border: 5px solid transparent;
+    height: 20px;
+    width: 50%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+form{
+    position: relative;
+    width: 600px;
+    margin: 32px auto 50px auto;
+    background: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: 0 1px 7px rgb(126, 124, 124);
+  }
+  mat-card{
+      display: inline;
+  }
+  form input{
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  form textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  button{
+      margin: 14px;
+  }
+  
+  

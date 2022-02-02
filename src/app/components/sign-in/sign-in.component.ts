@@ -31,6 +31,7 @@ export class SignInComponent implements OnInit {
     }
     this.user.login(reqData).subscribe((response:any)=>{
         console.log(response);
+        
     })
     }
     //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.signinForm.value, null, 4));
