@@ -8,10 +8,16 @@ import { HttpClient } from '@angular/common/http';
 export class HttpService {
   baseUrl = environment.baseURL
   constructor(private httpClient: HttpClient) { }
-  postService(url: string, reqdata: any, token: boolean = false, httpOption: any = {}) {
+  postService(url: any, reqdata: any, token: boolean = true, httpOption: any) {
     return this.httpClient.post(this.baseUrl + url, reqdata, token && httpOption)
   }
-  putService(url: string, reqdata: any, token: boolean = false, httpOption: any = {}) {
+  putService(url: string, reqdata: any, token: boolean = true, httpOption: any) {
     return this.httpClient.put(this.baseUrl + url, reqdata, token && httpOption)
+  }
+  getService(url: any, token: boolean = true, httpOption: any) {
+    return this.httpClient.get(this.baseUrl + url,  token && httpOption)
+  } 
+  deleteService(url:any,token:boolean=true,httpOptions:any){
+    return this.httpClient.get(this.baseUrl+url,token && httpOptions)
   }
 }

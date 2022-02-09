@@ -13,8 +13,11 @@ const routes: Routes = [
   {path:"sign-in",component:SignInComponent},
   {path:"find-email",component:FindEmailComponent},
   {path:"reset-password/:token",component:ResetPasswordComponent},
+
   {path:"dashboard",component:DashboardComponent,
-children:[{path:"notes",component:GetAllNotesComponent}]
+  children:[
+    {path:"notes",component:GetAllNotesComponent}
+  ]
 }
 
 ];

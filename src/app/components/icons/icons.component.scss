@@ -1,0 +1,27 @@
+.icon-container{
+    border: 5px solid transparent;
+    height: 5px;
+    width: 70%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent
+  }
+  button{
+      border:none;
+      background: #fff;
+  }
+ .icon{
+     padding-right:25px ;
+     margin-right:10px ;
+     opacity:0.6;
+     
+ }
+.icon:hover{
+    visibility: visible;
+    opacity: 0.9;
+    color: black;
+}
+mat-icon{
+    width: 6px;
+}

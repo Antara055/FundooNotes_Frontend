@@ -1,16 +1,24 @@
-<mat-card *ngIf="!card" class="cn-matcard">
-    <input placeholder="Take a note..." class="input" (click)="cardSwap()" />
-</mat-card>
-<mat-card class="list-view-mat-card" *ngIf="card">
-    <form [formGroup]="createNotesForm">
-        <input type="text" placeholder="Title" name="title" formControlName="title">
-        <p>
-            <textarea name="content" placeholder="Take a note" formControlName="description"></textarea>
-        </p>
-        <div class="cn-button" fxLayout="row" >
-            <button mat-stroked-button class="cn-close" (click)="onSubmit()" (click)="cardSwap()" fxLayoutAlign="end center">
-                Close
-            </button>
+<div class="cn-container" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card *ngIf="!card" class="cn-matcard">
+        <input placeholder="Take a note..." class="input" (click)="cardSwap()" />
+        <mat-icon  class="cn-three-buttons">check_box</mat-icon>
+        <mat-icon  class="cn-three-buttons">brush</mat-icon>
+        <mat-icon class="cn-three-buttons">insert_photo</mat-icon>
+    </mat-card>
+    <mat-card class="cn-matcard" *ngIf="card">
+        <form [formGroup]="createNotesForm">
+            <input type="text" placeholder="Title" name="title" formControlName="title" fxLayout="row">
+            <p>
+                <textarea name="content" placeholder="Take a note" formControlName="description"></textarea>
+            </p>
+             <div fxLayout="row" >
+                <app-icons></app-icons>
+                <div class="cn-button" >
+                <button mat-stroked-button class="cn-close" (click)="onSubmit()" (click)="cardSwap()">
+                    Close
+                </button>
+            </div>
         </div>
-    </form>
-</mat-card>
+        </form>
+    </mat-card>
+</div>

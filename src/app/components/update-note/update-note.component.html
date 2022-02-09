@@ -1,0 +1,17 @@
+<div class="update-container">
+    <form>
+        <input type="text" placeholder="Title" name="title" [(ngModel)]="title" fxLayout="row">
+        <p>
+            <textarea name="content" placeholder="Take a note" [(ngModel)]="description"></textarea>
+        </p>
+        <div fxLayout="row">
+            <app-icons></app-icons>
+            <div class="un-button">
+                <button mat-stroked-button class="un-close" (click)="onSubmit()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+

@@ -72,6 +72,13 @@
     border-bottom-right-radius: 30vh;
     width: 200px;
   }
+  #sidenav-button:focus {
+    background-color: rgba(235, 183, 13, 0.2);
+    margin-top: 2px;
+    border-top-right-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    width: 240px;
+  }
   .sidenav-font{
     font-size: 100px;
   }
@@ -91,8 +98,8 @@
   .right-header-button{
     border-radius: 50%;
   }
-  .nav-list{
-    width: 4000px;
+  .navlist{
+    width: 250px;
     padding: 10px;
 
   }
@@ -116,5 +123,7 @@
     height: 88vh;
     background: #fff;
     border: none;
+    //border: 4px solid green;
+    width: 100%;
   }
   

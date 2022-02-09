@@ -16,21 +16,9 @@
     align-items: center; 
     margin-left: 34%;
     margin: 32px auto 50px auto;
+
   }
-  .cn-close{
-    margin: 200px;
-    border: none;
-    background-color: #fff;
-  }
-  .cn-button {
-    border: 5px solid transparent;
-    height: 20px;
-    width: 50%;
-    top: 20px;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-  }
+  
 form{
     position: relative;
     width: 600px;
@@ -42,6 +30,8 @@ form{
   }
   mat-card{
       display: inline;
+      margin-left: 40%;
+      border: none;
   }
   form input{
     width: 100%;
@@ -60,8 +50,36 @@ form{
     resize: none;
   }
   
-  button{
-      margin: 14px;
+  
+  
+  .cn-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    padding-top: 65px;
+    
   }
-  
-  
+
+  .cn-close{
+    //margin: 50px;
+    border: 1px transparent;
+    background-color: #fff;
+    padding-left: 80px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 30px;
+  }
+  .cn-button {
+    //border: 5px solid black;
+    height: 30px;
+    width: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+  .cn-three-buttons{
+    padding-left: 20px; 
+    opacity: 0.6;
+    cursor: pointer;
+  }

@@ -8,6 +8,7 @@
                 <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" width="45">
             </div>
             <span class="header-fundoo">Fundoo</span>
+
             <div class="d-header-search">
                 <mat-form-field appearance="outline" [style.width.px]="900">
                     <mat-label>Search</mat-label>
@@ -66,11 +67,13 @@
                     </div>
     
                 </mat-nav-list>
+               
             </mat-sidenav>
     
-            <mat-sidenav-content>
-               <router-outlet></router-outlet>
+            <mat-sidenav-content style="width: 100%;">
+                <router-outlet></router-outlet>
             </mat-sidenav-content>
+            
         </mat-sidenav-container>
     </div>
 </div>

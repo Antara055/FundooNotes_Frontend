@@ -11,7 +11,6 @@ import { UserService } from 'src/app/services/user/user.service';
 export class SignInComponent implements OnInit {
   signinForm!: FormGroup;
   submitted = false;
-
   constructor(private formBuilder: FormBuilder,private user: UserService) { }
 
   ngOnInit() {
@@ -30,8 +29,8 @@ export class SignInComponent implements OnInit {
         password:this.signinForm.value.password
     }
     this.user.login(reqData).subscribe((response:any)=>{
-        console.log(response);
-        
+        console.log(response.data.UserDetails.token);
+      localStorage.setItem('token',response.data.UserDetails.token);
     })
     }
     //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.signinForm.value, null, 4));

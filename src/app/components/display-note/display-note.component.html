@@ -1,1 +1,19 @@
-<p>display-note works!</p>
+<div class="display-notes" fxLayout="row wrap" fxLayoutAlign="flex-start">
+    <div *ngFor="let note of notesArray" class="get-all-notes" fxLayout="row" fxLayoutAlign="space-around center" fxFlex.sm="100%">
+      <!-- <mat-card> -->
+        <mat-card-title-group>
+        <div class="mat-note">
+          <div class="pushPin">
+            <mat-icon>push_pin</mat-icon>
+          </div>
+        <h2 class="heading" (click)="openDialog(note)">{{note.title}}</h2> 
+        <p class="description" (click)="openDialog(note)">{{note.description}}</p> 
+        <div class="icons">
+            <app-icons ></app-icons>
+        </div>
+        </div>
+      </mat-card-title-group>
+    <!-- </mat-card> -->
+    </div>
+</div> 
+ 
