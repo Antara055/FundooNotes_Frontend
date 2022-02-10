@@ -10,6 +10,7 @@ import { NoteService } from 'src/app/services/note.service';
   styleUrls: ['./update-note.component.scss']
 })
 export class UpdateNoteComponent implements OnInit {
+  noteId:any;
   title:any;
   description:any;
 
@@ -18,12 +19,13 @@ export class UpdateNoteComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.note)
+      this.noteId=this.note._id,
       this.title=this.note.title,
       this.description=this.note.description
-    } 
-  
+    }
   onSubmit() { 
     let data = {
+      _id: this.noteId,
       title: this.title,
       description:this.description,
     }

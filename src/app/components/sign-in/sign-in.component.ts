@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user/user.service';
 
 
@@ -11,7 +12,7 @@ import { UserService } from 'src/app/services/user/user.service';
 export class SignInComponent implements OnInit {
   signinForm!: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private user: UserService) { }
+  constructor(private formBuilder: FormBuilder,private user: UserService, private router:Router) { }
 
   ngOnInit() {
     this.signinForm = this.formBuilder.group({
@@ -30,11 +31,20 @@ export class SignInComponent implements OnInit {
     }
     this.user.login(reqData).subscribe((response:any)=>{
         console.log(response.data.UserDetails.token);
-      localStorage.setItem('token',response.data.UserDetails.token);
+        localStorage.setItem('token',response.data.UserDetails.token);
+        this.router.navigateByUrl("/dashboard/notes"); 
+      
     })
     }
     //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.signinForm.value, null, 4));
-  }
+    /* constructor(private Authguardservice: AuthguardService, private router: Router) {}
+
+  canActivate():boolean{
+    if (!this.Authguardservice.gettoken()) {  
+      this.router.navigateByUrl("/login");  
+  }  
+  return this.Authguardservice.gettoken();  */
+}
 }
 
 

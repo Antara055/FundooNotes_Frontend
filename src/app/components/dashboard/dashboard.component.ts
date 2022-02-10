@@ -11,6 +11,8 @@ import {ChangeDetectorRef,  OnDestroy} from '@angular/core';
 export class DashboardComponent implements OnInit{
   private _mobileQueryListener: () => void;
   mobileQuery: MediaQueryList;
+  isMenuOpen=true;
+  contentMargin=240;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
@@ -18,6 +20,16 @@ export class DashboardComponent implements OnInit{
     this.mobileQuery.addListener(this._mobileQueryListener);
    }
   ngOnInit(): void {
+  }
+  onToolbarMenuToggle(){
+    this.isMenuOpen = !this.isMenuOpen;
+    if(!this.isMenuOpen)
+    {
+      this.contentMargin=100;
+    }
+    else{
+      this.contentMargin=200;
+    }
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);

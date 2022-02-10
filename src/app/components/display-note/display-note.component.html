@@ -3,17 +3,19 @@
       <!-- <mat-card> -->
         <mat-card-title-group>
         <div class="mat-note">
-          <div class="pushPin">
+          <!-- <div class="pushPin">
             <mat-icon>push_pin</mat-icon>
-          </div>
+          </div> -->
         <h2 class="heading" (click)="openDialog(note)">{{note.title}}</h2> 
         <p class="description" (click)="openDialog(note)">{{note.description}}</p> 
         <div class="icons">
-            <app-icons ></app-icons>
+            <app-icons></app-icons>
         </div>
         </div>
       </mat-card-title-group>
-    <!-- </mat-card> -->
+      <div>
+        <mat-icon class="pushPin">push_pin</mat-icon>
+      </div>
     </div>
 </div> 
  

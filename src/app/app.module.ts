@@ -62,7 +62,9 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     MatCardModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

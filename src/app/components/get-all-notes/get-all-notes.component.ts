@@ -17,8 +17,6 @@ getallnotes(){
   this.note.getAllNotes().subscribe((response:any)=>{
     console.log(response.data);
     this.noteList=response.data;
-    console.log("hiiii",this.noteList);
-    
   })
 }
 }

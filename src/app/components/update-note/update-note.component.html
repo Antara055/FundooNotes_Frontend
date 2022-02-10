@@ -4,7 +4,7 @@
         <p>
             <textarea name="content" placeholder="Take a note" [(ngModel)]="description"></textarea>
         </p>
-        <div fxLayout="row">
+        <div class="border" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="row">
             <app-icons></app-icons>
             <div class="un-button">
                 <button mat-stroked-button class="un-close" (click)="onSubmit()">
@@ -14,4 +14,3 @@
         </div>
     </form>
 </div>
-
