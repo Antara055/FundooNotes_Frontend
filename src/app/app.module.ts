@@ -22,12 +22,16 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+import { AuthgaurdService } from './services/authgaurdService/authgaurd.service';
 
 import { IconsComponent } from './components/icons/icons.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { ArchiveNotesComponent } from './components/archive-notes/archive-notes.component';
+import { TrashNotesComponent } from './components/trash-notes/trash-notes.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,9 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     CreateNoteComponent,
     DisplayNoteComponent,
     GetAllNotesComponent,
-    UpdateNoteComponent
+    UpdateNoteComponent,
+    ArchiveNotesComponent,
+    TrashNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -60,10 +66,11 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     MatToolbarModule,
     MatListModule,
     MatCardModule,
+    MatMenuModule,
     FormsModule
   ],
   providers: [
-    
+    AuthgaurdService
   ],
   bootstrap: [AppComponent]
 })

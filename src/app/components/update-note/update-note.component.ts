@@ -1,5 +1,4 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NoteService } from 'src/app/services/note.service';
 
@@ -19,15 +18,14 @@ export class UpdateNoteComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.note)
-      this.noteId=this.note._id,
       this.title=this.note.title,
       this.description=this.note.description
     }
   onSubmit() { 
     let data = {
-      _id: this.noteId,
+      id:this.note._id,
       title: this.title,
-      description:this.description,
+      description:this.description
     }
     this.notes.updateNotes(data).subscribe((response:any)=>{
       console.log(response)
@@ -37,4 +35,3 @@ export class UpdateNoteComponent implements OnInit {
       this.dialogRef.close();
     }
   }
-

@@ -3,13 +3,10 @@
       <!-- <mat-card> -->
         <mat-card-title-group>
         <div class="mat-note">
-          <!-- <div class="pushPin">
-            <mat-icon>push_pin</mat-icon>
-          </div> -->
         <h2 class="heading" (click)="openDialog(note)">{{note.title}}</h2> 
         <p class="description" (click)="openDialog(note)">{{note.description}}</p> 
         <div class="icons">
-            <app-icons></app-icons>
+            <app-icons [notesArraylist]="note"></app-icons>
         </div>
         </div>
       </mat-card-title-group>

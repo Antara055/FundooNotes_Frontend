@@ -36,6 +36,24 @@ export class NoteService {
     }
     return this.httpService.putService('/notes/note:_id',reqData,true,header)
   }
+  archiveNotes(reqData:any){
+    this.token=localStorage.getItem('token')
+    let header = {
+      headers:new HttpHeaders({
+        'token':this.token
+      })
+    }
+    return this.httpService.putService('/notes/archieve/_id',reqData,true,header)
+  }
+  trashNotes(reqData:any){
+    this.token=localStorage.getItem('token')
+    let header={
+      headers: new HttpHeaders({
+        'token':this.token
+      })
+    }
+    return this.httpService.putService('/notes/trash/_id',reqData,true,header)
+  }
 }
 
 

@@ -6,6 +6,7 @@ import { FindEmailComponent } from './components/find-email/find-email.component
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:"register",component:RegistrationComponent},
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:"dashboard",component:DashboardComponent,
   children:[
     {path:"notes",component:GetAllNotesComponent}
-  ]
+  ],canActivate:[AuthenticationGuard]
 }
 
 ];

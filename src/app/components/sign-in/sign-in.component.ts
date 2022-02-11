@@ -37,15 +37,8 @@ export class SignInComponent implements OnInit {
     })
     }
     //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.signinForm.value, null, 4));
-    /* constructor(private Authguardservice: AuthguardService, private router: Router) {}
-
-  canActivate():boolean{
-    if (!this.Authguardservice.gettoken()) {  
-      this.router.navigateByUrl("/login");  
-  }  
-  return this.Authguardservice.gettoken();  */
-}
+   
 }
 
 
-
+}

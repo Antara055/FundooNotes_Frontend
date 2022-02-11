@@ -36,8 +36,7 @@ onSubmit() {
         console.log(this.createNotesForm.value);
         let reqData={
          title:this.createNotesForm.value.title,
-         description:this.createNotesForm.value.description  
-         //color:this.createNotesForm.value.color
+         description:this.createNotesForm.value.description
       }
        this.note.createNote(reqData).subscribe((response:any)=>{
          console.log(response)

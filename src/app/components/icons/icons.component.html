@@ -10,24 +10,35 @@
         </button>
     </div>
     <div class="icon">
-        <button mat-icon-button>
+        <button mat-icon-button [matMenuTriggerFor]="changeolor">
             <mat-icon>color_lens</mat-icon>
         </button>
+        <mat-menu #changeolor="matMenu">
+            <button mat-mini-fab color="accent">
+                <mat-icon>plus_one</mat-icon>
+              </button>
+        </mat-menu>
     </div>
+
     <div class="icon">
         <button mat-icon-button>
             <mat-icon>image</mat-icon>
         </button>
-
     </div>
     <div class="icon">
-        <button mat-icon-button >
-            <mat-icon>archive</mat-icon>
+        <button mat-icon-button>
+            <mat-icon (click)="archiveNote()">archive</mat-icon>
         </button>
     </div>
     <div class="icon">
-    <button mat-icon-button >
-        <mat-icon>more_vert</mat-icon>
-    </button>
-</div>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>delete</mat-icon>
+                <span (click)="trashNote()">Delete</span>
+            </button>
+        </mat-menu>
+    </div>
 </div>
