@@ -13,10 +13,13 @@
         <button mat-icon-button [matMenuTriggerFor]="changeolor">
             <mat-icon>color_lens</mat-icon>
         </button>
-        <mat-menu #changeolor="matMenu">
-            <button mat-mini-fab color="accent">
-                <mat-icon>plus_one</mat-icon>
-              </button>
+        <mat-menu #changeolor="matMenu" class="color-box">
+            <div class="card">
+            <div *ngFor="let noteColor of Colors">
+                <button mat-mini-fab [style.background]="noteColor?.colorcode" (click)="setColor()" class="i-color">
+                </button>
+            </div>
+            </div>
         </mat-menu>
     </div>
 

@@ -54,6 +54,26 @@ export class NoteService {
     }
     return this.httpService.putService('/notes/trash/_id',reqData,true,header)
   }
+
+  
+  isArchive(){
+    this.token=localStorage.getItem('token')
+    let header={
+      headers:new HttpHeaders({
+        'token':this.token
+      })
+    }
+    return this.httpService.getService('/notes/note/isArchived',true,header)
+  }
+  isTrash(){
+    this.token=localStorage.getItem('token')
+    let header={
+      headers:new HttpHeaders({
+        'token':this.token
+      })
+    }
+    return this.httpService.getService('/notes/note/isDelete',true,header)
+  }
 }
 
 

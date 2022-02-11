@@ -10,6 +10,7 @@
   button{
       border:none;
       background: #fff;
+      width: 20px;
   }
  .icon{
      padding-right:25px ;
@@ -24,4 +25,40 @@
 }
 mat-icon{
     width: 6px;
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    //padding-left: 100px;
+    //padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:400px;
+  }
+  .i-color{
+    display: grid;
+    margin-right: 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  .color-box {
+      width: 800px;
+    
+}
+.mat-menu-panel {
+    min-width: 112px;
+    max-width: 417px;
+    /* overflow: auto; */
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100vh - 48px);
+    border-radius: 4px;
+    outline: 0;
+    min-height: 64px;
 }

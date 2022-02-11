@@ -13,6 +13,13 @@ export class GetAllNotesComponent implements OnInit {
   ngOnInit(): void {
     this.getallnotes()
   }
+
+  //for auto refresh
+  recieveMessage(e:any){
+    console.log(e)
+    this.getallnotes()
+  }
+  
 getallnotes(){
   this.note.getAllNotes().subscribe((response:any)=>{
     console.log(response.data);

@@ -18,7 +18,7 @@
                 </mat-form-field>
             </div>
             <div class="right-header-icon" fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="95">
-                <button mat-icon-button class="d-right-icon">
+                <button mat-icon-button class="d-right-icon" (click)="refreshButton()">
                     <mat-icon>refresh</mat-icon>
                 </button>
                 <button mat-icon-button class="d-right-icon">
@@ -28,7 +28,10 @@
                     <mat-icon>settings</mat-icon>
                 </button>
                 <button mat-icon-button class="d-right-icon">
-                    <mat-icon>account_circle</mat-icon>
+                    <mat-icon>apps</mat-icon>
+                </button>
+                <button mat-icon-button class="d-right-icon" (click)="Logout()">
+                    <mat-icon > account_circle</mat-icon>
                 </button>
             </div>
         </mat-toolbar>
@@ -39,7 +42,7 @@
             fixedTopGap="56">
                 <mat-nav-list class="navlist">
                     <div class="sidenav-font">
-                        <button mat-button id="sidenav-button">
+                        <button mat-button id="sidenav-button" routerLink="/dashboard/notes">
                             <mat-icon id="sidenav-icon">lightbulb_outline</mat-icon>
                             Notes
                         </button>
@@ -50,13 +53,13 @@
                             Reminder
                         </button>
                     </div>
-                    <div class="sidenav-font">
+                    <div class="sidenav-font" routerLink="/dashboard/archiveNotes">
                         <button mat-button id="sidenav-button">
                             <mat-icon id="sidenav-icon">archive</mat-icon>
                             Archive
                         </button>
                     </div>
-                    <div class="sidenav-font">
+                    <div class="sidenav-font" routerLink="/dashboard/trashNotes">
                         <button mat-button id="sidenav-button">
                             <mat-icon id="sidenav-icon">delete_outline</mat-icon>
                             Trash

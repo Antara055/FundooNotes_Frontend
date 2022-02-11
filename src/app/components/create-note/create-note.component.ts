@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {MatCardModule} from '@angular/material/card';
+//import {MatCardModule} from '@angular/material/card';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/services/note.service';
 
 
@@ -14,8 +15,8 @@ export class CreateNoteComponent implements OnInit {
   submitted = false; 
   card: boolean = false;
   token:any;
-
-  constructor(private formBuilder: FormBuilder,private note:NoteService) { }
+  @Output() autorefreshEvent = new EventEmitter<string>();
+  constructor(private formBuilder: FormBuilder,private note:NoteService,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
     this.createNotesForm = this.formBuilder.group({
@@ -25,7 +26,7 @@ export class CreateNoteComponent implements OnInit {
   });
 }
 cardSwap() {
-    console.log(this.card);
+    //console.log(this.card);
      return this.card === true ? (this.card = false) : (this.card = true); //condition operator
   }
 
@@ -40,6 +41,10 @@ onSubmit() {
       }
        this.note.createNote(reqData).subscribe((response:any)=>{
          console.log(response)
+         this.autorefreshEvent.emit(response);
+         this.snackbar.open('Note created Successfully !','',{
+        duration: 2000,
+      });
        })
       }
       else

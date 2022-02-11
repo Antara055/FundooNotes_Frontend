@@ -14,14 +14,10 @@ export class ArchiveNotesComponent implements OnInit {
   constructor(private note: NoteService) { }
 
   ngOnInit(): void {
-    //this.id=this.note._id
     this.getAllArchiveNotes();
   }
   getAllArchiveNotes(){
-    let data = {
-      
-    }
-    this.note.archiveNotes(data).subscribe((response:any)=>{
+    this.note.isArchive().subscribe((response:any)=>{
       console.log(response.data);
       this.archiveList=response.data;
     })

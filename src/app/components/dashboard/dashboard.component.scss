@@ -67,17 +67,18 @@
     font-size-adjust: auto;
   }
   #sidenav-button:hover {
-    background-color: rgb(175, 159, 159);
-    border-top-right-radius: 30vh;
-    border-bottom-right-radius: 30vh;
-    width: 200px;
-  }
-  #sidenav-button:focus {
-    background-color: rgba(235, 183, 13, 0.2);
-    margin-top: 2px;
+    background-color: rgb(240, 219, 219);
     border-top-right-radius: 30vh;
     border-bottom-right-radius: 30vh;
     width: 240px;
+  }
+  #sidenav-button:focus {
+    background-color: rgba(236, 211, 129, 0.945);
+    //margin-top: 2px;
+    border-top-right-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    width: 240px;
+    border: transparent;
   }
   .sidenav-font{
     font-size: 100px;
@@ -87,7 +88,7 @@
   }
   
   .right-header-icon{
-    margin-left: 10em;
+    margin-left: 7em;
     opacity: 0.5;
     border: 5px solid transparent;
     .d-right-icon{
@@ -103,7 +104,9 @@
     padding: 10px;
 
   }
-  
+  mat-icon{
+    font-size: 28px;
+  }
   mat-sidenav{
     background-color: white;
     border: none;
@@ -126,4 +129,6 @@
     //border: 4px solid green;
     width: 100%;
   }
-  
+  .d-right-icon{
+  background-color: #fff;
+  }
