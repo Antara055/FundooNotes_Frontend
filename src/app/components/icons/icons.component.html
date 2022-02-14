@@ -1,47 +1,65 @@
 <div class="icon-container" fxLayout="row" fxLayout.xs="row" fxFlex="100" fxFlex.xs="95">
-    <div class="icon">
-        <button mat-icon-button>
-            <mat-icon>notifications_paused</mat-icon>
-        </button>
-    </div>
-    <div class="icon">
-        <button mat-icon-button>
-            <mat-icon>person_add</mat-icon>
-        </button>
-    </div>
-    <div class="icon">
-        <button mat-icon-button [matMenuTriggerFor]="changeolor">
-            <mat-icon>color_lens</mat-icon>
-        </button>
-        <mat-menu #changeolor="matMenu" class="color-box">
-            <div class="card">
-            <div *ngFor="let noteColor of Colors">
-                <button mat-mini-fab [style.background]="noteColor?.colorcode" (click)="setColor()" class="i-color">
+    <div class="getAll" *ngIf="showIcons && this.notesArraylist.isDeleted === false" fxLayout="row" fxLayout.xs="row"
+        fxFlex="100" fxFlex.xs="95">
+        <div class="icon">
+            <button mat-icon-button>
+                <mat-icon>notifications_paused</mat-icon>
+            </button>
+        </div>
+        <div class="icon">
+            <button mat-icon-button>
+                <mat-icon>person_add</mat-icon>
+            </button>
+        </div>
+        <div class="icon">
+            <button mat-icon-button [matMenuTriggerFor]="changeolor">
+                <mat-icon>color_lens</mat-icon>
+            </button>
+            <mat-menu #changeolor="matMenu" class="color-box">
+                <div class="card">
+                    <div *ngFor="let noteColor of Colors">
+                        <button mat-mini-fab [style.background]="noteColor?.colorcode"
+                            (click)="setColor(noteColor?.colorcode)" class="i-color">
+                        </button>
+                    </div>
+                </div>
+            </mat-menu>
+        </div>
+
+        <div class="icon">
+            <button mat-icon-button>
+                <mat-icon>image</mat-icon>
+            </button>
+        </div>
+        <div class="icon">
+            <button mat-icon-button>
+                <mat-icon (click)="archiveNote()">archive</mat-icon>
+            </button>
+        </div>
+        <div class="icon">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>delete</mat-icon>
+                    <span (click)="trashNote()">Delete</span>
                 </button>
-            </div>
-            </div>
-        </mat-menu>
+            </mat-menu>
+        </div>
     </div>
 
-    <div class="icon">
-        <button mat-icon-button>
-            <mat-icon>image</mat-icon>
-        </button>
-    </div>
-    <div class="icon">
-        <button mat-icon-button>
-            <mat-icon (click)="archiveNote()">archive</mat-icon>
-        </button>
-    </div>
-    <div class="icon">
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+    <div class="trashIcons" *ngIf="!!showIcons && this.notesArraylist.isDeleted === true" fxLayout="row"
+        fxLayout.xs="row" fxFlex="100" fxFlex.xs="95">
+        <div class="icon">
+            <button mat-icon-button (click)="delete()">
                 <mat-icon>delete</mat-icon>
-                <span (click)="trashNote()">Delete</span>
             </button>
-        </mat-menu>
+        </div>
+        <div class="icon">
+            <button mat-icon-button>
+                <mat-icon>restore_from_trash</mat-icon>
+            </button>
+        </div>
     </div>
 </div>

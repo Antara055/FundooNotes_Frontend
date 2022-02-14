@@ -15,15 +15,14 @@ export class GetAllNotesComponent implements OnInit {
   }
 
   //for auto refresh
-  recieveMessage(e:any){
-    console.log(e)
+  messageRecieved(e:any) {
     this.getallnotes()
   }
-  
+
 getallnotes(){
   this.note.getAllNotes().subscribe((response:any)=>{
     console.log(response.data);
-    this.noteList=response.data;
+    this.noteList=response.data.reverse();
   })
 }
 }

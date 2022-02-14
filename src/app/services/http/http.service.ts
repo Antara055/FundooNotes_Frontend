@@ -17,7 +17,11 @@ export class HttpService {
   getService(url: any, token: boolean = true, httpOption: any) {
     return this.httpClient.get(this.baseUrl + url,  token && httpOption)
   } 
-  deleteService(url:any,token:boolean=true,httpOptions:any){
-    return this.httpClient.get(this.baseUrl+url,token && httpOptions)
+  /* deleteService(url: any, reqdata: any, token: boolean = false, httpOption: any){
+    return this.httpClient.delete(this.baseUrl+url, reqdata, token && httpOption) 
+   }  */
+   deleteService(url:any, token:boolean = true, httpOptions:any){
+    console.log("http delete=====");
+    return this.httpClient.delete(this.baseUrl+url,token && httpOptions)
   }
 }

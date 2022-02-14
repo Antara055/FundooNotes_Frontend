@@ -19,7 +19,7 @@ export class ArchiveNotesComponent implements OnInit {
   getAllArchiveNotes(){
     this.note.isArchive().subscribe((response:any)=>{
       console.log(response.data);
-      this.archiveList=response.data;
+      this.archiveList=response.data.reverse();
     })
   }
 

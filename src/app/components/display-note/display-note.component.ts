@@ -10,7 +10,7 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
   styleUrls: ['./display-note.component.scss']
 })
 export class DisplayNoteComponent implements OnInit {
-  @Input() notesArray: any;
+  @Input() notesArray: any; //input decorator (child of getallnotes)
   title: any;
   description: any;
   
@@ -19,9 +19,11 @@ export class DisplayNoteComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.notesArray)
   }
+
   openDialog(reqData: any): void {
     const dialogRef = this.dialog.open(UpdateNoteComponent, {
-      width: '500px',
+      width: '750px',
+      height:'250px',
       data: reqData,
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -29,5 +31,9 @@ export class DisplayNoteComponent implements OnInit {
       this.description=result;
     });
   } 
+  //for color change
+  messageRecievedFromNote(e:any){
+    console.log(e);
+  }
 }
 

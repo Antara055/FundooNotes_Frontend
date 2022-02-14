@@ -1,5 +1,5 @@
-<div class="dashboard-container">
-    <div class="d-container" [class.d-mobile]="mobileQuery.matches">
+<div class="dashboard-container" [class.d-mobile]="mobileQuery.matches">
+    <div class="d-container" >
         <mat-toolbar class="toolbar" fxLayout="row" fxLayout.xs="row">
             <div fxLayout.xs="column">
                 <button mat-icon-button (click)="sidenav.toggle()">
@@ -11,7 +11,7 @@
             </div>
             <span class="header-fundoo">Fundoo</span>
 
-            <div class="d-header-search" fxlayout="row" fxLayoutAlign="center" fxLayout.xs="column" fxFlex.xs="95">
+            <div class="d-header-search" fxlayout="row" fxLayoutAlign="center">
                 <mat-form-field appearance="outline" [style.width.px]="900">
                     <mat-label>Search</mat-label>
                     <input matInput placeholder="Search">

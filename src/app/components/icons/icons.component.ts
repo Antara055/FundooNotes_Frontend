@@ -1,7 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NoteService } from 'src/app/services/note.service';
-import { MatMenuModule } from '@angular/material/menu';
-import { reduce } from 'rxjs';
 
 @Component({
   selector: 'app-icons',
@@ -9,7 +7,11 @@ import { reduce } from 'rxjs';
   styleUrls: ['./icons.component.scss']
 })
 export class IconsComponent implements OnInit {
+
+  showIcons:boolean=true;
   @Input() notesArraylist: any
+  @Output() changeColorOfNote = new EventEmitter<any>();  //posting color to diplay note via event emitter (display=child,icons=parent)
+
   Colors=[
     {
       name: 'Red', colorcode: '#F28B82'
@@ -47,8 +49,16 @@ export class IconsComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.notesArraylist);
   }
-  setColor(){
-    
+  setColor(noteColor:any){
+    console.log(this.notesArraylist.color);
+    let data={
+      id:this.notesArraylist._id,
+      color:noteColor
+    }
+    this.note.updateNotes(data).subscribe((response:any)=>{
+      console.log(response);
+    })
+    window.location.reload();
   }
   archiveNote() {
     console.log(this.notesArraylist._id);
@@ -56,12 +66,23 @@ export class IconsComponent implements OnInit {
     this.note.archiveNotes(data).subscribe((response: any) => {
       console.log(response);
     })
+    window.location.reload();
   }
   trashNote(){
     let data={id:this.notesArraylist._id}
     this.note.trashNotes(data).subscribe((response: any)=>{
       console.log(response);
     })
+    window.location.reload();
+  }
+  delete(){
+    let data={
+      id:this.notesArraylist._id
+    }
+    console.log(data)
+     this.note.deleteNotes(data).subscribe((response:any)=>{
+      console.log(response)
+    }) 
   }
   
 }

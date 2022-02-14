@@ -3,23 +3,25 @@
 // }
 form{
     position: relative;
-    width: 1000px;
+    width: 600px;
+    height: 125px;
  }
   
   form input{
     width: 100%;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     outline: none;
     font-size: 1rem;
     resize: none;
   }
   
   form textarea{
+    margin-top: 30px;
     width: 100%;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 22px;
     resize: none;   
   }
 
@@ -38,9 +40,10 @@ form{
   }
 
   .update-container{
+    flex-wrap: wrap;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 1px 7px rgb(126, 124, 124);
+    //box-shadow: 0 1px 7px rgb(126, 124, 124);
     border: 5px solid transparent;
     height: 40px;
     width: 600px;
@@ -49,26 +52,33 @@ form{
     align-items: center; 
     margin-left: 34%;
     margin: 32px auto 50px auto;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 
   .un-close{
-    margin-left: 70%;
+    //margin-left: 70%;
+    height: 48px;
+    width: 71px;
+    font-size: 22px;
+    border: none;
+    background-color: #fff;
   }
   .un-button {
     border: 5px solid transparent;
-    height: 20px;
-    width: 50%;
+    height: 47px;
+    width: 23%;
     top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent
-  }
+    background-color: transparent;
+}
+  
   .border {
     border: 5px solid transparent;
-    height: 20px;
-    width: 50%;
+    margin-top: -14px;
+    height: 56px;
+    width: 100%;
     top: 20px;
     display: flex;
     align-items: center;

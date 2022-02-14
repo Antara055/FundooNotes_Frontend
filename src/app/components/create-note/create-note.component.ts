@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //import {MatCardModule} from '@angular/material/card';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -15,6 +15,7 @@ export class CreateNoteComponent implements OnInit {
   submitted = false; 
   card: boolean = false;
   token:any;
+  
   @Output() autorefreshEvent = new EventEmitter<string>();
   constructor(private formBuilder: FormBuilder,private note:NoteService,private snackbar:MatSnackBar) { }
 
@@ -46,6 +47,7 @@ onSubmit() {
         duration: 2000,
       });
        })
+       //window.location.reload();
       }
       else
       {
