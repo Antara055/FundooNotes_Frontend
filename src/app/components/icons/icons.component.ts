@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/services/note.service';
 
 @Component({
@@ -7,11 +8,10 @@ import { NoteService } from 'src/app/services/note.service';
   styleUrls: ['./icons.component.scss']
 })
 export class IconsComponent implements OnInit {
-
   showIcons:boolean=true;
   @Input() notesArraylist: any
-  @Output() changeColorOfNote = new EventEmitter<any>();  //posting color to diplay note via event emitter (display=child,icons=parent)
-
+  @Output() changeColorOfNote = new EventEmitter<any>();  
+  @Output() autorefreshEvent = new EventEmitter<any>(); 
   Colors=[
     {
       name: 'Red', colorcode: '#F28B82'
@@ -44,7 +44,7 @@ export class IconsComponent implements OnInit {
       name: 'Gray', colorcode: '#E8EAED'
     }
   ]
-  constructor(private note: NoteService) { }
+  constructor(private note: NoteService,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
     console.log(this.notesArraylist);
@@ -57,6 +57,7 @@ export class IconsComponent implements OnInit {
     }
     this.note.updateNotes(data).subscribe((response:any)=>{
       console.log(response);
+      this.changeColorOfNote.emit(noteColor);
     })
     window.location.reload();
   }
@@ -65,6 +66,10 @@ export class IconsComponent implements OnInit {
     let data = { id: this.notesArraylist._id }
     this.note.archiveNotes(data).subscribe((response: any) => {
       console.log(response);
+      this.autorefreshEvent.emit(response);
+      this.snackbar.open('Note Archived Successfully !','',{
+        duration: 2000,
+      });
     })
     window.location.reload();
   }

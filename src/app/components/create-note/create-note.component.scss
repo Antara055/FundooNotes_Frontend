@@ -16,13 +16,14 @@
     align-items: center; 
     margin-left: 34%;
     margin: 32px auto 50px auto;
-
+    padding-bottom: 15px;
   }
   
 form{
     position: relative;
     width: 600px;
-    margin: 32px auto 50px auto;
+    height: 130px;
+    margin: 88px auto 50px auto;
     background: #fff;
     padding: 7px;
     border-radius: 7px;
@@ -50,13 +51,11 @@ form{
     resize: none;
   }
   
-  
-  
   .cn-container{
     width: 90%;
     display:flex;
     justify-content: center;
-    padding-top: 65px;
+    padding-top: 15px;
     
   }
 

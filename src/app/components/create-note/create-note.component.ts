@@ -16,7 +16,7 @@ export class CreateNoteComponent implements OnInit {
   card: boolean = false;
   token:any;
   
-  @Output() autorefreshEvent = new EventEmitter<string>();
+  @Output() autorefreshEvent = new EventEmitter<any>();
   constructor(private formBuilder: FormBuilder,private note:NoteService,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
@@ -29,6 +29,7 @@ export class CreateNoteComponent implements OnInit {
 cardSwap() {
     //console.log(this.card);
      return this.card === true ? (this.card = false) : (this.card = true); //condition operator
+     //this.card=true;
   }
 
 onSubmit() { 

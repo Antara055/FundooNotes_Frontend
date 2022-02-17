@@ -16,6 +16,7 @@ export class GetAllNotesComponent implements OnInit {
 
   //for auto refresh
   messageRecieved(e:any) {
+    console.log("msg rcved",e);
     this.getallnotes()
   }
 

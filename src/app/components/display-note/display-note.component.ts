@@ -31,9 +31,10 @@ export class DisplayNoteComponent implements OnInit {
       this.description=result;
     });
   } 
+  
   //for color change
   messageRecievedFromNote(e:any){
-    console.log(e);
+    console.log("hello",e);
   }
 }
 
